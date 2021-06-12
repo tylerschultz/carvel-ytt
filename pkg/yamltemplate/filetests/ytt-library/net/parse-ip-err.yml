@@ -1,0 +1,12 @@
+#@ load("@ytt:url", "url")
+
+
+ipv4:
+  ip: #@ net.parse_ip("not-a-valid-ip").string()
+
++++
+
+ERR: 
+- __ytt_tplXXX_set_node: Error in parse_ip: Input string is not a valid IP.
+    in <toplevel>
+      stdin:4 |   ip: #@ net.parse_ip("not-a-valid-ip").string()
